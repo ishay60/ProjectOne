@@ -1,0 +1,76 @@
+.user-container {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* provide space between inputs and buttons */
+}
+
+.user input[type="text"],
+.user input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.user button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user button:hover {
+  background-color: #0056b3;
+}
+
+.user button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.additional-data {
+  display: none;
+  flex-direction: column;
+  gap: 8px; /* provide space between inputs */
+  padding-top: 10px; /* space from the user data to additional data */
+}
+
+.user:hover .additional-data {
+  display: flex;
+}
+
+.additional-data input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional: You can add a transition effect for the display of additional data */
+.user .additional-data {
+  transition: all 0.3s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: top;
+  height: 0;
+  opacity: 0;
+}
+
+.user:hover .additional-data {
+  transform: scaleY(1);
+  height: auto;
+  opacity: 1;
+}
